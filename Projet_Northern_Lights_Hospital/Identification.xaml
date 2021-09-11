@@ -1,0 +1,19 @@
+﻿<Window x:Class="Projet_Northern_Lights_Hospital.Identification"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projet_Northern_Lights_Hospital"
+        mc:Ignorable="d"
+        Title="Identification" Height="235" Width="502" WindowStartupLocation="CenterScreen" Background="#FFF1E3E3">
+    <Grid>
+        <Label Content="User Name:" HorizontalAlignment="Left" Margin="164,33,0,0" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.243,0.577"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="164,79,0,0" VerticalAlignment="Top" Width="74"/>
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="23" Margin="243,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="243,84,0,0" VerticalAlignment="Top" Width="140" Height="21"/>
+        <Image HorizontalAlignment="Left" Height="83" Margin="60,33,0,0" VerticalAlignment="Top" Width="75" Source="Clé.jpg"/>
+        <Button x:Name="btnOk" Content="OK" HorizontalAlignment="Left" Height="28" Margin="243,134,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.117,0.5" Click="btnOk_Click"/>
+        <Button x:Name="btnAnnuler" Content="Quitter" HorizontalAlignment="Left" Height="28" Margin="320,134,0,0" VerticalAlignment="Top" Width="63" RenderTransformOrigin="0.159,0.464" Click="btnAnnuler_Click"/>
+
+    </Grid>
+</Window>

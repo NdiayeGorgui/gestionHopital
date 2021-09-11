@@ -1,0 +1,51 @@
+﻿<Window x:Class="Projet_Northern_Lights_Hospital.Conge"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projet_Northern_Lights_Hospital"
+        mc:Ignorable="d"
+        Title="Conge" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FFF1E3E3">
+    <Grid>
+        <Label Content="ID Admission:" HorizontalAlignment="Left" Height="41" Margin="33,27,0,0" VerticalAlignment="Top" Width="119" FontWeight="Bold"/>
+        <ComboBox x:Name="cboAdmission" HorizontalAlignment="Left" Height="27" Margin="157,27,0,0" VerticalAlignment="Top" Width="189" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}" DisplayMemberPath="IDAdmission" SelectionChanged="cboAdmission_SelectionChanged"/>
+        <Button x:Name="btnConge" Content="Donner Congé" HorizontalAlignment="Left" Height="38" Margin="277,313,0,0" VerticalAlignment="Top" Width="189" Click="btnConge_Click"/>
+        <Label Content="Date congé:" HorizontalAlignment="Left" Height="35" Margin="35,223,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.5,0.5" FontWeight="Bold">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.318"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <DatePicker x:Name="dpDateConge" HorizontalAlignment="Left" Height="36" Margin="157,230,0,0" VerticalAlignment="Top" Width="189"/>
+        <Label Content="NSS Patient:" HorizontalAlignment="Left" Height="41" Margin="33,73,0,0" VerticalAlignment="Top" Width="119" FontWeight="Bold"/>
+        <Label x:Name="lblNSS" Content="" HorizontalAlignment="Left" Height="26" Margin="157,73,0,0" VerticalAlignment="Top" Width="127"/>
+        <Label Content="Nom Patient:" HorizontalAlignment="Left" Height="30" Margin="33,117,0,0" VerticalAlignment="Top" Width="97" RenderTransformOrigin="0.5,0.5" FontWeight="Bold">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.132"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Prénom Patient:" HorizontalAlignment="Left" Height="24" Margin="33,173,0,0" VerticalAlignment="Top" Width="97" FontWeight="Bold"/>
+        <Label x:Name="lblNom" Content="" HorizontalAlignment="Left" Height="44" Margin="157,122,0,0" VerticalAlignment="Top" Width="127"/>
+        <Label x:Name="lblPrenom" Content="" HorizontalAlignment="Left" Height="41" Margin="157,173,0,0" VerticalAlignment="Top" Width="111"/>
+        <Label Content="Type de Chambre:" HorizontalAlignment="Left" Height="41" Margin="467,125,0,0" VerticalAlignment="Top" Width="119" FontWeight="Bold"/>
+        <Label x:Name="lblTypelit" Content="" HorizontalAlignment="Left" Height="24" Margin="591,125,0,0" VerticalAlignment="Top" Width="111"/>
+        <Label Content="Assurance:" HorizontalAlignment="Left" Height="41" Margin="467,73,0,0" VerticalAlignment="Top" Width="119" FontWeight="Bold"/>
+        <Label x:Name="lblAssurance" Content="" HorizontalAlignment="Left" Height="24" Margin="591,73,0,0" VerticalAlignment="Top" Width="154"/>
+        <Label Content="Télévision:" HorizontalAlignment="Left" Height="41" Margin="467,173,0,0" VerticalAlignment="Top" Width="119" FontWeight="Bold"/>
+        <Label x:Name="lblTelevision" Content="" HorizontalAlignment="Left" Height="24" Margin="591,173,0,0" VerticalAlignment="Top" Width="111"/>
+        <Label Content="Téléphone:" HorizontalAlignment="Left" Height="41" Margin="467,223,0,0" VerticalAlignment="Top" Width="119" FontWeight="Bold"/>
+        <Label x:Name="lblTelephone" Content="" HorizontalAlignment="Left" Height="24" Margin="591,223,0,0" VerticalAlignment="Top" Width="111"/>
+        <Image HorizontalAlignment="Left" Height="93" Margin="602,286,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.475,0.4" Source="images/patient.jpg"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="33,286,0,0" VerticalAlignment="Top" Width="100" Source="images/medecin.jpg"/>
+
+    </Grid>
+</Window>

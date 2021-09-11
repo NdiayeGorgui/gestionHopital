@@ -1,0 +1,9 @@
+﻿<Application x:Class="Projet_Northern_Lights_Hospital.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Projet_Northern_Lights_Hospital"
+             StartupUri="Identification.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

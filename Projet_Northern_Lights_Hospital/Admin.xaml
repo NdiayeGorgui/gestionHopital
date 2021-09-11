@@ -1,0 +1,24 @@
+﻿<Window x:Class="Projet_Northern_Lights_Hospital.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projet_Northern_Lights_Hospital"
+        mc:Ignorable="d"
+        Title="Admin" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FFF1E3E3">
+    <Grid>
+        <Menu Height="20" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="436" Background="Azure" Grid.ColumnSpan="3">
+            <MenuItem Header="Administrer" Width="70" >
+                <MenuItem x:Name="addMed" Header="_Ajouter Medecin" Click="addMed_Click" />
+                <MenuItem x:Name="modifMed" Header="_Modifier Medecin" Click="modifMed_Click" />
+                <MenuItem x:Name="delMedecin" Header="_Supprimer Medecin" Click="delMedecin_Click" />
+                <MenuItem Name="Quitter" Header="_Quitter" Click="Quitter_Click" />
+            </MenuItem>
+            <MenuItem Header="Consulter">
+                <MenuItem x:Name="ConsultationLst" Header="_Tableau de consultations" Click="ConsultationLst_Click" />
+
+            </MenuItem>
+        </Menu>
+        <Image HorizontalAlignment="Left" Height="345" Margin="58,53,0,0" VerticalAlignment="Top" Width="656" Source="images/hopital.png"/>
+    </Grid>
+</Window>

@@ -1,0 +1,60 @@
+﻿<Window x:Class="Projet_Northern_Lights_Hospital.AjoutAdmission"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projet_Northern_Lights_Hospital"
+        mc:Ignorable="d"
+        Title="Ajout Admission" Height="450" Width="800" Background="#FFF1E3E3" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,10,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="NSS:" HorizontalAlignment="Left" Height="28" Margin="32,32,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label Content="Medecin:" HorizontalAlignment="Left" Height="34" Margin="27,32,0,0" VerticalAlignment="Top" Width="111" Grid.Column="1"/>
+        <Label Content="Numéro Lit:" HorizontalAlignment="Left" Height="24" Margin="25,198,0,0" VerticalAlignment="Top" Width="87" Grid.Column="1"/>
+        <Label Content="Date d'admission:" HorizontalAlignment="Left" Height="28" Margin="26,302,0,0" VerticalAlignment="Top" Width="111"/>
+        <Label Content="Chirurgie programmé:" HorizontalAlignment="Left" Height="28" Margin="32,92,0,0" VerticalAlignment="Top" Width="131"/>
+        <Label Content="Date chirurgie:" HorizontalAlignment="Left" Height="34" Margin="29,136,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="Téléviseur:" HorizontalAlignment="Left" Height="36" Margin="29,192,0,0" VerticalAlignment="Top" Width="131"/>
+        <Label Content="Téléphone:" HorizontalAlignment="Left" Height="30" Margin="26,253,0,0" VerticalAlignment="Top" Width="110"/>
+        <ComboBox x:Name="cboNSS" HorizontalAlignment="Left" Height="28" Margin="142,32,0,0" VerticalAlignment="Top" Width="160" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}" DisplayMemberPath="NSS" SelectionChanged="cboNSS_SelectionChanged"/>
+        <ComboBox x:Name="cboMedecin" HorizontalAlignment="Left" Height="30" Margin="141,32,0,0" VerticalAlignment="Top" Width="156" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}"  Grid.Column="1">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Path=prenomMedecin}"/>
+                        <TextBlock Text=" "/>
+                        <TextBlock Text="{Binding Path=nomMedecin}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox x:Name="cboNumLit" HorizontalAlignment="Left" Height="30" Margin="141,198,0,0" VerticalAlignment="Top" Width="160" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}" DisplayMemberPath="NumeroLit" Grid.Column="1"/>
+
+        <DatePicker x:Name="dpAdmission" HorizontalAlignment="Left" Height="29" Margin="148,302,0,0" VerticalAlignment="Top" Width="154"/>
+        <DatePicker x:Name="dpChirurgie" HorizontalAlignment="Left" Height="28" Margin="148,142,0,0" VerticalAlignment="Top" Width="154"/>
+        <Grid Margin="169,94,116,289">
+            <RadioButton x:Name="rbChirurgieOui" Content="OUI"  Checked="rbChirurgieOui_Checked" Margin="0,1,82,0"/>
+            <RadioButton x:Name="rbChirurgieNon" Content="NON" Margin="88,0,0,3" HorizontalAlignment="Left" Width="53" Checked="rbChirurgieNon_Checked"/>
+        </Grid>
+        <Grid Margin="166,198,106,187">
+            <RadioButton x:Name="rbTeleviseurOui" Content="OUI" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="49" RenderTransformOrigin="0.327,-0.06"/>
+            <RadioButton x:Name="rbTeleviseurNon" Content="NON" HorizontalAlignment="Left" Height="22" Margin="101,0,0,0" VerticalAlignment="Top" Width="53" RenderTransformOrigin="0.462,1.205" IsChecked="True"/>
+        </Grid>
+        <Grid Margin="163,259,109,125">
+            <RadioButton x:Name="rbTelephoneOui" Content="OUI" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="49" RenderTransformOrigin="0.327,-0.06"/>
+            <RadioButton x:Name="rbTelephoneNon" Content="NON" HorizontalAlignment="Left" Height="22" Margin="101,0,0,0" VerticalAlignment="Top" Width="53" RenderTransformOrigin="0.462,1.205" IsChecked="True"/>
+        </Grid>
+        <Label Content="Type de Chambre:" HorizontalAlignment="Left" Height="30" Margin="25,153,0,0" VerticalAlignment="Top" Width="105" Grid.Column="1"/>
+        <ComboBox x:Name="cboTypeLit" HorizontalAlignment="Left" Height="30" Margin="141,153,0,0" VerticalAlignment="Top" Width="160" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}" DisplayMemberPath="description" SelectionChanged="cboTypeLit_SelectionChanged" Grid.Column="1"/>
+        <Label Content="Assurance:" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="24,259,0,0" VerticalAlignment="Top" Width="110"/>
+        <TextBox x:Name="txtAssurance" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="147,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" IsEnabled="False"/>
+        <Button x:Name="btnCreer" Content="Créer" HorizontalAlignment="Left" Height="28" Margin="340,354,0,0" VerticalAlignment="Top" Width="160" Click="btnCreer_Click" Grid.ColumnSpan="2"/>
+        <Label Content="Departement:" HorizontalAlignment="Left" Height="30" Margin="27,94,0,0" VerticalAlignment="Top" Width="105" Grid.Column="1"/>
+        <ComboBox x:Name="cboDepartement" HorizontalAlignment="Left" Height="30" Margin="141,92,0,0" VerticalAlignment="Top" Width="160" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}" DisplayMemberPath="nomDepartement" Grid.Column="1" />
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="147,302,0,0" VerticalAlignment="Top" Width="154" Source="images/admission.jpg"/>
+
+    </Grid>
+</Window>

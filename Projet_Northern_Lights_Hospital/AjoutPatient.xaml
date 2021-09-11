@@ -1,0 +1,36 @@
+﻿<Window x:Class="Projet_Northern_Lights_Hospital.AjoutPatient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projet_Northern_Lights_Hospital"
+        mc:Ignorable="d"
+        Title="Ajout Patient" Height="450" Width="800" Background="#FFF1E3E3" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="NSS:" HorizontalAlignment="Left" Height="29" Margin="36,20,0,0" VerticalAlignment="Top" Width="59"/>
+        <Label Content="Date Naissance:" HorizontalAlignment="Left" Height="25" Margin="36,76,0,0" VerticalAlignment="Top" Width="97"/>
+        <Label Content="Nom:" HorizontalAlignment="Left" Height="25" Margin="36,122,0,0" VerticalAlignment="Top" Width="81"/>
+        <Label Content="Prénom:" HorizontalAlignment="Left" Height="26" Margin="36,172,0,0" VerticalAlignment="Top" Width="71"/>
+        <Label Content="Adresse:" HorizontalAlignment="Left" Height="28" Margin="36,223,0,0" VerticalAlignment="Top" Width="71"/>
+        <Label Content="Ville:" HorizontalAlignment="Left" Height="29" Margin="351,20,0,0" VerticalAlignment="Top" Width="59"/>
+        <Label Content="Province:" HorizontalAlignment="Left" Height="25" Margin="351,76,0,0" VerticalAlignment="Top" Width="97"/>
+        <Label Content="Code Postal:" HorizontalAlignment="Left" Height="25" Margin="351,122,0,0" VerticalAlignment="Top" Width="81"/>
+        <Label Content="Téléphone:" HorizontalAlignment="Left" Height="26" Margin="351,172,0,0" VerticalAlignment="Top" Width="71"/>
+        <Label Content="Assurance:" HorizontalAlignment="Left" Height="28" Margin="351,223,0,0" VerticalAlignment="Top" Width="71"/>
+        <TextBox x:Name="txtNss" HorizontalAlignment="Left" Height="20" Margin="161,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149"/>
+        <TextBox x:Name="txtNom" HorizontalAlignment="Left" Height="20" Margin="161,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149"/>
+        <TextBox x:Name="txtPrenom" HorizontalAlignment="Left" Height="20" Margin="161,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149"/>
+        <TextBox x:Name="txtVille" HorizontalAlignment="Left" Height="20" Margin="433,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
+        <TextBox x:Name="txtProvince" HorizontalAlignment="Left" Height="20" Margin="433,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
+        <TextBox x:Name="txtCodePostal" HorizontalAlignment="Left" Height="20" Margin="437,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
+        <TextBox x:Name="txtTelephone" HorizontalAlignment="Left" Height="20" Margin="437,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
+        <ComboBox x:Name="cboAssurance" HorizontalAlignment="Left" Height="20" Margin="437,231,0,0" VerticalAlignment="Top" Width="128" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}" DisplayMemberPath="nomAssurance"/>
+        <DatePicker x:Name="dpDateNaissance" HorizontalAlignment="Left" Margin="161,76,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAjouter" Content="Ajouter" HorizontalAlignment="Left" Height="30" Margin="161,286,0,0" VerticalAlignment="Top" Width="101" Click="btnAjouter_Click"/>
+        <Button x:Name="btnEffacer" Content="Effacer" HorizontalAlignment="Left" Height="30" Margin="656,19,0,0" VerticalAlignment="Top" Width="86" Click="btnEffacer_Click"/>
+        <TextBox x:Name="txtAdresse" HorizontalAlignment="Left" Height="41" Margin="161,227,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149"/>
+        <Button x:Name="btnFaireAdmission" Content="Faire une Admission pour ce Patient" HorizontalAlignment="Left" Height="30" Margin="433,286,0,0" VerticalAlignment="Top" Width="200" Click="btnFaireAdmission_Click"/>
+        <Image HorizontalAlignment="Left" Height="111" Margin="624,81,0,0" VerticalAlignment="Top" Width="118" Source="images/patient.jpg"/>
+
+    </Grid>
+</Window>
